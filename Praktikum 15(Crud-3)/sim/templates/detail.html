@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+
+{% block konten %}
+<tbody>
+    {% for data in dt_pengaduan %}
+  <tr>
+    <td><a href="detail.html" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">#</a></td>
+    <td>{{data.tgl_post}}</td>
+    <td>{{data.subjek}}</td>
+    <td>{{data.kategori}}</td>
+    <td>{{data.detail_pengaduan}}</td>
+    <td>{{data.mahasiswa_id}} / {{data.mahasiswa.nama}}</td>
+    <td><a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Edit</a></td>
+    <td><a href="" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit">Hapus</a></td>
+    
+  </tr>
+  {% endfor %}
+</tbody>
+{% endblock %}
+

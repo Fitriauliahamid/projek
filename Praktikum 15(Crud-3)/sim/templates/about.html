@@ -1,0 +1,15 @@
+
+{% extends "base.html"%}
+
+{% block konten %}
+<h1>tentang kami</h1>
+<p>Perkenalkan nama saya fitri aulia hamid, doakan saya semoga dapat memahami MK website pemograman dengan baik, dan dapat bermanfaat kelak. aamiin</p>
+{% for data in data_susel %}
+<h2 style="font-style: oblique;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Data Kawal Corona Sumatera selatan :</h2>
+<p>Positif : <b>{{data.Kasus_Posi}}</b></p>
+<p>Sembuh : <b>{{data.Kasus_Semb}}</b></p>
+<p>Meninggal : <b>{{data.Kasus_Meni}}</b></p>
+
+{% endfor %}
+{% endblock %}
+
